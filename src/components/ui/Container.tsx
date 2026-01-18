@@ -1,0 +1,15 @@
+import clsx from "clsx";
+
+export function Container({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) {
+    return (
+        <div className={clsx("max-w-5xl mx-auto px-6 md:px-8", className)}>
+            {children}
+        </div>
+    );
+}
