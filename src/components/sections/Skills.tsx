@@ -33,7 +33,7 @@ export function Skills() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.05 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-zinc-900/50 rounded-2xl hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
                         >
                             <item.icon size={32} className="mb-4 text-gray-700 dark:text-gray-300 stroke-1" />

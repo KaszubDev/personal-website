@@ -7,13 +7,14 @@ import { ArrowRight } from "lucide-react";
 
 export function ShortAbout() {
     return (
-        <section className="py-24 bg-gray-50 dark:bg-zinc-900/50">
+        <section id="about-summary" className="py-24 bg-gray-50 dark:bg-zinc-900/50">
             <Container>
                 <div className="max-w-2xl">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 1.0 }}
                         className="text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wide uppercase mb-6"
                     >
                         About Me
@@ -22,15 +23,16 @@ export function ShortAbout() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 1.0, delay: 0.2 }}
                         className="text-2xl md:text-3xl font-medium leading-tight mb-8"
                     >
-                        I combine design intuition with engineering rigor to build software that feels intuitive, robust and beautiful.
+                        I combine engineering skills with design intuition to craft user-friendly, high-performance software that is both practical and beautiful.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                        transition={{ duration: 1.0, delay: 0.4 }}
                     >
                         <Link
                             href="/about"

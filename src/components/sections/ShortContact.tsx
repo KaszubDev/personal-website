@@ -12,6 +12,7 @@ export function ShortContact() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 1.0 }}
                     className="bg-black dark:bg-white text-white dark:text-black rounded-3xl p-12 md:p-24 text-center overflow-hidden relative"
                 >
                     <div className="relative z-10">

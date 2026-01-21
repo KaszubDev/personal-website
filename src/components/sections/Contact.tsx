@@ -10,9 +10,10 @@ export function Contact() {
         <section id="contact" className="py-32">
             <Container>
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 1.0 }}
                     className="text-center"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-8">

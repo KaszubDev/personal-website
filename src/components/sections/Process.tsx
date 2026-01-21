@@ -38,6 +38,7 @@ export function Process() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 1.0 }}
                     className="text-3xl font-bold mb-16"
                 >
                     Process
@@ -50,7 +51,7 @@ export function Process() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ duration: 0.8, delay: index * 0.2 }}
                             className="flex gap-6"
                         >
                             <span className="text-4xl font-light text-gray-300 dark:text-gray-700">

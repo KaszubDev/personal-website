@@ -3,25 +3,36 @@
 import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+
+const HeroScene = dynamic(() => import("../three/HeroScene").then((mod) => mod.HeroScene), {
+    ssr: false,
+    loading: () => <div className="absolute inset-0 z-0 bg-transparent" />
+});
 
 export function Hero() {
     return (
         <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
             {/* Immersive Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
                 <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-slow" />
                 <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse-slow delay-1000" />
                 <div className="absolute inset-0 bg-white/50 dark:bg-black/80 backdrop-blur-[2px]" />
             </div>
 
-            <Container className="relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
+            {/* 3D Scene */}
+            <div className="absolute inset-0 z-1">
+                <HeroScene />
+            </div>
+
+            <Container className="relative z-10 pointer-events-none">
+                <div className="max-w-4xl mx-auto text-center pointer-events-auto">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
                     >
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-black dark:text-white leading-tight">
                             Building modern <br />
@@ -34,19 +45,10 @@ export function Hero() {
                         </p>
                     </motion.div>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
-                    >
-                        I craft minimalist, high-performance digital experiences that merge technical precision with aesthetic excellence.
-                    </motion.p>
-
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
                         <Link href="#projects">
@@ -62,7 +64,34 @@ export function Hero() {
                         </Link>
                     </motion.div>
                 </div>
+
+
             </Container>
-        </section>
+
+            {/* Scroll Indicator */}
+            <motion.button
+                onClick={() => {
+                    const nextSection = document.getElementById('about-summary');
+                    if (nextSection) {
+                        const offset = 80; // Approximate header height
+                        const top = nextSection.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [0, 10, 0] }}
+                transition={{
+                    duration: 2,
+                    delay: 1,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut"
+                }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 dark:text-gray-500 z-20 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
+                aria-label="Scroll down"
+            >
+                <ChevronDown size={48} strokeWidth={1.5} />
+            </motion.button>
+        </section >
     );
 }
