@@ -3,7 +3,7 @@ export const profile = {
   role: "Frontend Developer",
   bio: "I craft high-performance digital experiences. With a passion for clean code and aesthetic precision, I build websites that are not just functional, but beautiful.",
   location: "Kraków, Poland",
-  email: "test@email.com",
+  email: "kaszubowskikrzys@gmail.com",
 };
 
 export const about = {
