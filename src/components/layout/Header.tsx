@@ -32,7 +32,7 @@ export function Header() {
                             ))}
                             <li>
                                 <Link href="/contact">
-                                    <Button variant="primary" size="sm">
+                                    <Button variant="premium" size="sm">
                                         Contact
                                     </Button>
                                 </Link>

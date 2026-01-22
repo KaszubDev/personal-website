@@ -5,7 +5,7 @@ import clsx from "clsx";
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "secondary" | "ghost" | "outline";
+    variant?: "primary" | "secondary" | "ghost" | "outline" | "premium";
     size?: "sm" | "md" | "lg";
     className?: string;
     children: React.ReactNode;
@@ -18,6 +18,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-zinc-800 dark:text-gray-100 dark:hover:bg-zinc-700",
             ghost: "bg-transparent text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/10",
             outline: "bg-transparent border border-gray-200 text-gray-900 hover:bg-gray-50 dark:border-white/10 dark:text-gray-100 dark:hover:bg-white/5",
+            premium: "relative bg-transparent border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white overflow-hidden transition-all duration-300 hover:border-transparent hover:text-white hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-r before:from-blue-600 before:to-purple-600 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
         };
 
         const sizes = {

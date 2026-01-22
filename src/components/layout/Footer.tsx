@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "../ui/Container";
 
 export function Footer() {
@@ -25,12 +26,12 @@ export function Footer() {
                         >
                             LinkedIn
                         </a>
-                        <a
-                            href="mailto:krzysztof.kaszubowski@gmail.com"
+                        <Link
+                            href="/contact"
                             className="text-sm text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
                         >
-                            Email
-                        </a>
+                            Contact
+                        </Link>
                     </div>
                 </div>
             </Container>

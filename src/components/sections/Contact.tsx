@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
 import { MoveRight } from "lucide-react";
 import { profile } from "@/data/profile";
+import Link from "next/link";
 
 export function Contact() {
     return (
@@ -22,13 +23,13 @@ export function Contact() {
                             extraordinary?
                         </span>
                     </h2>
-                    <a
-                        href={`mailto:${profile.email}`}
+                    <Link
+                        href="/contact"
                         className="inline-flex items-center gap-3 text-lg font-medium hover:gap-5 transition-all duration-300"
                     >
                         Say Hello
                         <MoveRight size={20} />
-                    </a>
+                    </Link>
                 </motion.div>
             </Container>
         </section>
