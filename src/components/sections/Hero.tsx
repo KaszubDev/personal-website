@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
+import { SpotlightText } from "../ui/SpotlightText";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -40,9 +41,10 @@ export function Hero() {
                                 web experiences
                             </span>
                         </h1>
-                        <p className="text-2xl md:text-3xl font-medium text-gray-400 dark:text-gray-500 mb-8">
-                            Focused on clarity and quality.
-                        </p>
+                        <SpotlightText
+                            text="Focused on clarity and quality."
+                            className="text-2xl md:text-3xl font-medium mb-8"
+                        />
                     </motion.div>
 
                     <motion.div
