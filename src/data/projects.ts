@@ -36,4 +36,40 @@ export const projects: Project[] = [
         tech: ["React", "Storybook", "Emotion"],
         link: "https://monoui.design",
     },
+    {
+        id: "4",
+        title: "Neon Banking",
+        description:
+            "A neobank mobile app interface with biometric authentication and spending categorization using ML. iOS specific fluid animations.",
+        role: "iOS Engineer",
+        tech: ["SwiftUI", "CoreML", "Combine"],
+        link: "https://example.com/neon",
+    },
+    {
+        id: "5",
+        title: "Chronos AI",
+        description:
+            "Time management platform that uses predictive AI to schedule meetings and deep work blocks automatically.",
+        role: "Lead Developer",
+        tech: ["Python", "FastAPI", "React", "PostgreSQL"],
+        github: "https://github.com/example/chronos",
+    },
+    {
+        id: "6",
+        title: "Vertex Architecture",
+        description:
+            "Interactive 3D portfolio for an award-winning architecture firm. Features WebGL-based model viewers and smooth page transitions.",
+        role: "Creative Developer",
+        tech: ["Three.js", "WebGL", "GSAP"],
+        link: "https://example.com/vertex",
+    },
+    {
+        id: "7",
+        title: "Echo Audio",
+        description:
+            "High-fidelity spatial audio streaming service for audiophiles. Lossless compression and custom DSP algorithms.",
+        role: "Backend Engineer",
+        tech: ["Rust", "WASM", "Node.js"],
+        link: "https://example.com/echo",
+    },
 ];
