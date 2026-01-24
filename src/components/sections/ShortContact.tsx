@@ -18,7 +18,7 @@ export function ShortContact() {
                     <div className="relative z-10">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">Let&apos;s work together.</h2>
                         <p className="text-lg md:text-xl text-gray-300 dark:text-gray-600 max-w-xl mx-auto mb-10">
-                            Need a experienced developer who cares about the details? I&apos;m available for freelance projects and consulting.
+                            Need an experienced developer who cares about the details? <br/> I&apos;m available for freelance projects and consulting.
                         </p>
                         <Link
                             href="/contact"
