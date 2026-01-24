@@ -38,18 +38,25 @@ export function Header() {
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className={`text-sm font-medium transition-colors ${isActive(link.href)
+                                        className={`relative text-sm font-medium transition-colors ${isActive(link.href)
                                             ? "text-black dark:text-white"
                                             : "text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
                                             }`}
                                     >
                                         {link.label}
+                                        {isActive(link.href) && (
+                                            <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-black dark:bg-white rounded-full" />
+                                        )}
                                     </Link>
                                 </li>
                             ))}
                             <li>
                                 <Link href="/contact">
-                                    <Button variant="premium" size="sm">
+                                    <Button
+                                        variant="premium"
+                                        size="sm"
+                                        className={isActive("/contact") ? "before:opacity-100 border-transparent text-white" : ""}
+                                    >
                                         Contact
                                     </Button>
                                 </Link>

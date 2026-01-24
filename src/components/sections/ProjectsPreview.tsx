@@ -62,29 +62,37 @@ export function ProjectsPreview() {
                 <div className="flex justify-between items-end mb-8 md:mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Selected Work</h2>
 
-                    <div className="hidden md:flex gap-4">
-                        <button
-                            onClick={() => scroll("left")}
-                            disabled={!canScrollLeft}
-                            className={clsx(
-                                "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-all duration-300",
-                                !canScrollLeft ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200 dark:hover:bg-zinc-700 text-gray-900 dark:text-white cursor-pointer"
-                            )}
-                            aria-label="Scroll left"
+                    <div className="hidden md:flex items-center gap-8">
+                        <Link
+                            href="/projects"
+                            className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                         >
-                            <ArrowLeft size={20} />
-                        </button>
-                        <button
-                            onClick={() => scroll("right")}
-                            disabled={!canScrollRight}
-                            className={clsx(
-                                "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-all duration-300",
-                                !canScrollRight ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200 dark:hover:bg-zinc-700 text-gray-900 dark:text-white cursor-pointer"
-                            )}
-                            aria-label="Scroll right"
-                        >
-                            <ArrowRight size={20} />
-                        </button>
+                            View all projects
+                        </Link>
+                        <div className="flex gap-4">
+                            <button
+                                onClick={() => scroll("left")}
+                                disabled={!canScrollLeft}
+                                className={clsx(
+                                    "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-all duration-300",
+                                    !canScrollLeft ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200 dark:hover:bg-zinc-700 text-gray-900 dark:text-white cursor-pointer"
+                                )}
+                                aria-label="Scroll left"
+                            >
+                                <ArrowLeft size={20} />
+                            </button>
+                            <button
+                                onClick={() => scroll("right")}
+                                disabled={!canScrollRight}
+                                className={clsx(
+                                    "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-all duration-300",
+                                    !canScrollRight ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-200 dark:hover:bg-zinc-700 text-gray-900 dark:text-white cursor-pointer"
+                                )}
+                                aria-label="Scroll right"
+                            >
+                                <ArrowRight size={20} />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -129,27 +137,35 @@ export function ProjectsPreview() {
                 </div>
 
                 {/* Mobile Navigation (bottom) */}
-                <div className="flex md:hidden justify-end gap-4 mt-4">
-                    <button
-                        onClick={() => scroll("left")}
-                        disabled={!canScrollLeft}
-                        className={clsx(
-                            "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-opacity",
-                            !canScrollLeft ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
-                        )}
+                <div className="flex md:hidden justify-between items-center mt-6">
+                    <Link
+                        href="/projects"
+                        className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
-                        <ArrowLeft size={20} />
-                    </button>
-                    <button
-                        onClick={() => scroll("right")}
-                        disabled={!canScrollRight}
-                        className={clsx(
-                            "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-opacity",
-                            !canScrollRight ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
-                        )}
-                    >
-                        <ArrowRight size={20} />
-                    </button>
+                        View all projects
+                    </Link>
+                    <div className="flex gap-4">
+                        <button
+                            onClick={() => scroll("left")}
+                            disabled={!canScrollLeft}
+                            className={clsx(
+                                "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-opacity",
+                                !canScrollLeft ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
+                            )}
+                        >
+                            <ArrowLeft size={20} />
+                        </button>
+                        <button
+                            onClick={() => scroll("right")}
+                            disabled={!canScrollRight}
+                            className={clsx(
+                                "p-3 rounded-full bg-gray-100 dark:bg-zinc-800 transition-opacity",
+                                !canScrollRight ? "opacity-30 cursor-not-allowed" : "opacity-100 cursor-pointer"
+                            )}
+                        >
+                            <ArrowRight size={20} />
+                        </button>
+                    </div>
                 </div>
             </Container>
         </section>

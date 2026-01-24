@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: Props) {
         <main className="pt-32 pb-24">
             <Container>
                 <Link
-                    href="/#projects" // Go back to projects section on home
+                    href="/projects"
                     className="inline-flex items-center text-sm text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors mb-8"
                 >
                     <ArrowLeft size={16} className="mr-2" />
