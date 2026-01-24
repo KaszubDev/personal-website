@@ -6,7 +6,7 @@ import { ShortContact } from "@/components/sections/ShortContact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="">
       <Hero />
       <ShortAbout />
       <ProjectsPreview />

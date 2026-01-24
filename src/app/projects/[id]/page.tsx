@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: Props) {
     }
 
     return (
-        <main className="pt-32 pb-24">
+        <main className="pt-32 pb-10">
             <Container>
                 <Link
                     href="/projects"

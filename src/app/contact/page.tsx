@@ -10,7 +10,7 @@ export default function ContactPage() {
 
     if (state.succeeded) {
         return (
-            <main className="pt-32 pb-24 min-h-screen flex items-center justify-center">
+            <main className="pt-32 pb-24 flex items-center justify-center">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -36,7 +36,7 @@ export default function ContactPage() {
     }
 
     return (
-        <main className="pt-32 pb-24 min-h-screen">
+        <main className="pt-32 pb-24">
             <Container>
                 <div className="max-w-2xl mx-auto text-center">
                     <motion.h1

@@ -18,7 +18,12 @@ export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
-    const isActive = (href: string) => pathname === href;
+    const isActive = (href: string) => {
+        if (!pathname) return false;
+        if (href === "/") return false;
+        if (href === "/projects" && pathname.startsWith("/projects")) return true;
+        return pathname === href;
+    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 dark:bg-black/80 dark:border-white/10 transition-colors duration-500">
