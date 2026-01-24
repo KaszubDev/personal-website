@@ -15,7 +15,7 @@ const HeroScene = dynamic(() => import("../three/HeroScene").then((mod) => mod.H
 
 export function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+        <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
                 <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-slow" />
