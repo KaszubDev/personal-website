@@ -5,7 +5,6 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { motion } from "framer-motion";
 import { Code2, Cpu, Globe, Heart, Layers, Zap } from "lucide-react";
 import { Process } from "@/components/sections/Process";
-import React from "react";
 
 export default function AboutPage() {
     return (
@@ -23,7 +22,7 @@ export default function AboutPage() {
                         <span className="text-gray-400 dark:text-gray-500">Fueled by Curiosity</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
-                        I am motivated by solving complex problems to deliver robust, well-optimized software. Constantly refining my craft.
+                        Solving complex problems to deliver robust, well-optimized software. Constantly refining my craft.
                     </p>
                 </motion.div>
 
@@ -101,7 +100,7 @@ export default function AboutPage() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold text-black dark:text-white">Precision</h3>
                         <p className="text-gray-600 dark:text-gray-400">
-                            Every pixel matters. From the layout grid to the easing curves of animations, I obsess over details that others might miss, because they accumulate to create quality.
+                            Every pixel matters. From the layout grid to the easing curves of animations, I obsess over details that others might miss.
                         </p>
                     </div>
                     <div className="space-y-4">
