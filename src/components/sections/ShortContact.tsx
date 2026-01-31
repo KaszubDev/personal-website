@@ -4,9 +4,16 @@ import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
 import Link from "next/link";
 
-export function ShortContact() {
+interface ShortContactProps {
+    withBorder?: boolean;
+}
+
+export function ShortContact({ withBorder = false }: ShortContactProps) {
     return (
-        <section className="py-32">
+        <section className={withBorder
+            ? "py-24 md:py-32 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-800"
+            : "py-32"
+        }>
             <Container>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -18,7 +25,7 @@ export function ShortContact() {
                     <div className="relative z-10">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">Let&apos;s work together.</h2>
                         <p className="text-lg md:text-xl text-gray-300 dark:text-gray-600 max-w-xl mx-auto mb-10">
-                            Need an experienced developer who cares about the details? <br/> I&apos;m available for freelance projects and consulting.
+                            Need an experienced developer who cares about the details? <br /> I&apos;m available for freelance projects and consulting.
                         </p>
                         <Link
                             href="/contact"

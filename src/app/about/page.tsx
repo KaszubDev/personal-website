@@ -4,7 +4,11 @@ import { Container } from "@/components/ui/Container";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { motion } from "framer-motion";
 import { Code2, Cpu, Globe, Heart, Layers, Zap } from "lucide-react";
+import { Experience } from "@/components/sections/Experience";
+import { MyStory } from "@/components/sections/MyStory";
+import { Values } from "@/components/sections/Values";
 import { Process } from "@/components/sections/Process";
+import { ShortContact } from "@/components/sections/ShortContact";
 
 export default function AboutPage() {
     return (
@@ -56,9 +60,9 @@ export default function AboutPage() {
                             className="md:col-span-1"
                         />
                         <BentoGridItem
-                            title="Philosophy"
+                            title="Values"
                             description="I believe good design is invisible. It should just work, seamlessly and reliably."
-                            header={<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 p-4 flex items-center justify-center text-center italic text-neutral-500">"Simplicity is the ultimate sophistication."</div>}
+                            header={<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 p-4 flex items-center justify-center text-center italic text-neutral-500">&quot;Simplicity is the ultimate sophistication.&quot;</div>}
                             icon={<Heart className="h-4 w-4 text-neutral-500" />}
                             className="md:col-span-2"
                         />
@@ -71,55 +75,17 @@ export default function AboutPage() {
                         />
                     </BentoGrid>
                 </motion.div>
-
-                {/* My Story Section */}
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16 mb-24 md:mb-32 max-w-5xl mx-auto">
-                    <div className="md:w-1/3">
-                        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500 sticky top-24">
-                            My Story
-                        </h2>
-                    </div>
-                    <div className="md:w-2/3 prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-400">
-                        <p className="mb-6">
-                            I am a Web Frontend Developer driven by the challenge of creating simple, elegant solutions to complex problems.
-                        </p>
-                        <p className="mb-6">
-                            My journey began over 6 years ago. I believe that good design is invisible - it just works. My approach concentrates on performance, accessibility and clean code.
-                        </p>
-                        <p className="mb-6">
-                            I am a passionate learner and always eager to explore new technologies and trends. I am also a team player and enjoy working with others to create innovative solutions.
-                        </p>
-                        <p>
-                            Outside of work, I enjoy staying active through sports, traveling to new destinations and spending quality time with my loved ones.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Philosophy Section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32 max-w-5xl mx-auto">
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-black dark:text-white">Precision</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Every pixel matters. From the layout grid to the easing curves of animations, I obsess over details that others might miss.
-                        </p>
-                    </div>
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-black dark:text-white">Performance</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Speed is a feature. I architect applications to load fast and run smooth, ensuring that technical debt doesn't accumulate and slow down the user experience.
-                        </p>
-                    </div>
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-bold text-black dark:text-white">Accessibility</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            The web is for everyone. I build with semantic HTML and follow WCAG guidelines to ensure that my work is usable by people with diverse abilities.
-                        </p>
-                    </div>
-                </div>
-
             </Container>
 
+            <MyStory />
+
+            <Experience />
+
+            <Values />
+
             <Process />
+
+            <ShortContact withBorder />
         </main >
     );
 }
