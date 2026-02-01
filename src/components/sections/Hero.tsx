@@ -89,7 +89,7 @@ export function Hero() {
                     repeatType: "loop",
                     ease: "easeInOut"
                 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 dark:text-gray-500 z-20 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 dark:text-gray-300 z-20 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
                 aria-label="Scroll down"
             >
                 <ChevronDown size={48} strokeWidth={1.5} />
