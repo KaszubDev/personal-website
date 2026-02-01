@@ -12,7 +12,7 @@ import { ShortContact } from "@/components/sections/ShortContact";
 
 export default function AboutPage() {
     return (
-        <main className="pt-24 pb-16 md:pt-32 md:pb-24 bg-white dark:bg-black min-h-screen">
+        <main className="pt-24 md:pt-32 bg-white dark:bg-black min-h-screen">
             <Container>
                 {/* Header Section */}
                 <motion.div
@@ -47,7 +47,7 @@ export default function AboutPage() {
                         />
                         <BentoGridItem
                             title="Tech Stack"
-                            description="Specialized in React, Next.js, TypeScript, and Three.js ecosystems."
+                            description="Specialized in React, Next.js, TypeScript, Node.js ecosystems."
                             header={<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 items-center justify-center"><Code2 size={48} className="text-neutral-400" /></div>}
                             icon={<Cpu className="h-4 w-4 text-neutral-500" />}
                             className="md:col-span-1"

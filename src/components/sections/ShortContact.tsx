@@ -12,7 +12,7 @@ export function ShortContact({ withBorder = false }: ShortContactProps) {
     return (
         <section className={withBorder
             ? "py-24 md:py-32 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-800"
-            : "py-32"
+            : "py-24 md:py-32"
         }>
             <Container>
                 <motion.div

@@ -75,7 +75,7 @@ export function Hero() {
                 onClick={() => {
                     const nextSection = document.getElementById('about-summary');
                     if (nextSection) {
-                        const offset = 80; // Approximate header height
+                        const offset = window.innerWidth < 768 ? 64 : 80;
                         const top = nextSection.getBoundingClientRect().top + window.scrollY - offset;
                         window.scrollTo({ top, behavior: 'smooth' });
                     }
