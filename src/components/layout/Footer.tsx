@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "../ui/Container";
+import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 
 export function Footer() {
     return (
@@ -32,6 +33,7 @@ export function Footer() {
                         >
                             Contact
                         </Link>
+                        <ThemeSwitcher />
                     </div>
                 </div>
             </Container>

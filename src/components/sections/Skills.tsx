@@ -46,7 +46,7 @@ export function Skills() {
                             </div>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                                {group.items.map((item, index) => (
+                                {group.items.map((item) => (
                                     <motion.div
                                         key={item.name}
                                         whileHover={{ y: -5 }}

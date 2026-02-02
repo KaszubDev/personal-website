@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { projects, Project } from "@/data/projects";
+import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
