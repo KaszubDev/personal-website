@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
 export function ProjectsPreview() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -108,11 +109,21 @@ export function ProjectsPreview() {
                                 className="min-w-[85vw] md:min-w-[480px] lg:min-w-[560px] snap-start"
                             >
                                 <Card hoverEffect={true} className="h-full">
-                                    <div className="bg-gray-100 dark:bg-zinc-800 aspect-[16/9] mb-6 relative">
-                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-                                        <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                            {project.title} Preview
-                                        </div>
+                                    <div className="bg-gray-100 dark:bg-zinc-800 aspect-[16/9] mb-6 relative overflow-hidden">
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10" />
+                                        {project.image ? (
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                sizes="(max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
+                                                {project.title} Preview
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="p-6 pt-0">
                                         <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center gap-2">

@@ -6,6 +6,7 @@ export interface Project {
     tech: string[];
     link?: string;
     github?: string;
+    image?: string;
 }
 
 export const projects: Project[] = [
@@ -17,6 +18,8 @@ export const projects: Project[] = [
         role: "Frontend Engineer",
         tech: ["Next.js", "TypeScript", "D3.js", "WebSockets"],
         link: "https://example.com/lumina",
+        github: "https://github.com/example/lumina",
+        image: "/images/projects/lumina-dashboard.png",
     },
     {
         id: "2",
@@ -26,6 +29,7 @@ export const projects: Project[] = [
         role: "Fullstack Developer",
         tech: ["Next.js", "Shopify Storefront API", "Tailwind CSS"],
         github: "https://github.com/example/aura",
+        image: "/images/projects/aura-commerce.png",
     },
     {
         id: "3",

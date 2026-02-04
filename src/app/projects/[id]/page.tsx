@@ -3,6 +3,7 @@ import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 
@@ -54,9 +55,22 @@ export default async function ProjectPage({ params }: Props) {
                             {project.description}
                         </p>
 
-                        {/* Placeholder for images */}
-                        <div className="aspect-video bg-gray-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-gray-400 mb-8">
-                            Project Screenshot / Demo Video
+                        {/* Project Image */}
+                        <div className="aspect-video bg-gray-100 dark:bg-zinc-800 rounded-2xl overflow-hidden relative mb-8">
+                            {project.image ? (
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 66vw"
+                                    priority
+                                />
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
+                                    Project Screenshot / Demo Video
+                                </div>
+                            )}
                         </div>
 
                         <div className="prose prose-lg dark:prose-invert">

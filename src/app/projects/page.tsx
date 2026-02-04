@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function ProjectsPage() {
     return (
@@ -47,12 +48,20 @@ export default function ProjectsPage() {
                             >
                                 <Card hoverEffect={true} className="h-full">
                                     <div className="bg-gray-100 dark:bg-zinc-800 aspect-[16/9] mb-6 relative overflow-hidden rounded-t-xl">
-                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-                                        <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                            {/* Placeholder for project image */}
-                                            <span className="sr-only">{project.title} Preview</span>
-                                            {project.title} Preview
-                                        </div>
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10" />
+                                        {project.image ? (
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
+                                                {project.title} Preview
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="p-6 pt-0">
                                         <h2 className="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center gap-2">

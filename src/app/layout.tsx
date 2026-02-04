@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Krzysztof Kaszubowski | Web Frontend Developer",
+  title: "Krzysztof Kaszubowski | Web Developer",
   description:
-    "Portfolio website of Krzysztof Kaszubowski, a Web Frontend Developer specializing in building high-performance web applications.",
+    "Portfolio website of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance web applications.",
   openGraph: {
-    title: "Krzysztof Kaszubowski | Web Frontend Developer",
+    title: "Krzysztof Kaszubowski | Web Developer",
     description:
-      "Portfolio website of Krzysztof Kaszubowski, a Web Frontend Developer",
+      "Portfolio website of Krzysztof Kaszubowski, a Web Developer",
     type: "website",
     locale: "en_US",
   },
