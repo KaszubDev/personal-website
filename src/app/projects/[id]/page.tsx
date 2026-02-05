@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { ProjectGallery } from "@/components/content/ProjectGallery";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 
@@ -38,7 +39,7 @@ export default async function ProjectPage({ params }: Props) {
     }
 
     return (
-        <main className="pt-32 pb-10">
+        <main className="pt-32 pb-24">
             <Container>
                 <Link
                     href="/projects"
@@ -84,6 +85,7 @@ export default async function ProjectPage({ params }: Props) {
                                 How we approached the problem, design decisions made and the technical implementation details.
                             </p>
                         </div>
+
                     </div>
 
                     <div className="lg:col-span-1">
@@ -124,6 +126,18 @@ export default async function ProjectPage({ params }: Props) {
                         </div>
                     </div>
                 </div>
+
+                {/* Gallery Section - Full Width */}
+                {project.gallery && project.gallery.length > 0 && (
+                    <div className="mt-20 pt-10 border-t border-gray-100 dark:border-white/5">
+                        <h3 className="text-2xl font-bold mb-8">Project Gallery</h3>
+                        <ProjectGallery
+                            images={project.gallery}
+                            title={project.title}
+                            className="w-full"
+                        />
+                    </div>
+                )}
             </Container>
         </main>
     );

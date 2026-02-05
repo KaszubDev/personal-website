@@ -7,6 +7,7 @@ export interface Project {
     link?: string;
     github?: string;
     image?: string;
+    gallery?: string[];
 }
 
 export const projects: Project[] = [
@@ -20,6 +21,12 @@ export const projects: Project[] = [
         link: "https://example.com/lumina",
         github: "https://github.com/example/lumina",
         image: "/images/projects/lumina-dashboard.png",
+        gallery: [
+            "/images/projects/lumina-dashboard.png",
+            "/images/projects/lumina-dashboard.png",
+            "/images/projects/lumina-dashboard.png",
+            "/images/projects/lumina-dashboard.png",
+        ]
     },
     {
         id: "2",
@@ -30,6 +37,11 @@ export const projects: Project[] = [
         tech: ["Next.js", "Shopify Storefront API", "Tailwind CSS"],
         github: "https://github.com/example/aura",
         image: "/images/projects/aura-commerce.png",
+        gallery: [
+            "/images/projects/aura-commerce.png",
+            "/images/projects/aura-commerce.png",
+            "/images/projects/aura-commerce.png",
+        ]
     },
     {
         id: "3",
