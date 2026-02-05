@@ -1,29 +1,54 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useMemo } from "react";
+import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 function Particles({ count = 300 }) {
     const mesh = useRef<THREE.Points>(null);
     const light = useRef<THREE.PointLight>(null);
 
-    // Generate initial random positions
-    const initialPositions = useMemo(() => {
+    // Use Refs for logic to avoid React state mutation rules on buffers
+    const initialPositionsRef = useRef<Float32Array | null>(null);
+
+    useEffect(() => {
+        if (!mesh.current) return;
+
         const pos = new Float32Array(count * 3);
+        const init = new Float32Array(count * 3);
+
         for (let i = 0; i < count; i++) {
-            pos[i * 3] = (Math.random() - 0.5) * 15;     // x
-            pos[i * 3 + 1] = (Math.random() - 0.5) * 15; // y
-            pos[i * 3 + 2] = (Math.random() - 0.5) * 15; // z
+            const x = (Math.random() - 0.5) * 15;
+            const y = (Math.random() - 0.5) * 15;
+            const z = (Math.random() - 0.5) * 15;
+
+            init[i * 3] = x;
+            init[i * 3 + 1] = y;
+            init[i * 3 + 2] = z;
+
+            pos[i * 3] = x;
+            pos[i * 3 + 1] = y;
+            pos[i * 3 + 2] = z;
         }
-        return pos;
+
+        initialPositionsRef.current = init;
+
+        // Imperatively update the geometry attribute
+        // This avoids passing a mutable array through React props/state
+        if (mesh.current.geometry) {
+            mesh.current.geometry.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        }
     }, [count]);
 
-    // Clone to mutable positions for animation
-    const positions = useMemo(() => new Float32Array(initialPositions), [initialPositions]);
-
     useFrame((state) => {
-        if (!mesh.current) return;
+        if (!mesh.current || !mesh.current.geometry || !initialPositionsRef.current) return;
+
+        // Get the current positions from the geometry attribute directly
+        const positionAttribute = mesh.current.geometry.getAttribute('position') as THREE.BufferAttribute;
+        if (!positionAttribute) return;
+
+        const positions = positionAttribute.array as Float32Array;
+        const initialPositions = initialPositionsRef.current;
 
         // Current mouse position in 3D space (approximate projection)
         const { x, y } = state.pointer;
@@ -42,8 +67,7 @@ function Particles({ count = 300 }) {
             const dy = mouseY - positions[i3 + 1];
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            // Magnetic Force Radius
-            const forceRadius = 2.5; // Reduced from 4
+            const forceRadius = 2.5;
 
             if (dist < forceRadius) {
                 const force = (forceRadius - dist) / forceRadius;
@@ -62,7 +86,7 @@ function Particles({ count = 300 }) {
         }
 
         // Apply attribute updates
-        mesh.current.geometry.attributes.position.needsUpdate = true;
+        positionAttribute.needsUpdate = true;
 
         // Follow mouse with subtle light
         if (light.current) {
@@ -75,12 +99,7 @@ function Particles({ count = 300 }) {
         <>
             <pointLight ref={light} distance={10} intensity={2} color="#4f46e5" />
             <points ref={mesh}>
-                <bufferGeometry>
-                    <bufferAttribute
-                        attach="attributes-position"
-                        args={[positions, 3]}
-                    />
-                </bufferGeometry>
+                <bufferGeometry />
                 <pointsMaterial
                     size={0.06}
                     color="#60a5fa"

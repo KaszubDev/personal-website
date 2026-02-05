@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface SpotlightTextProps {
@@ -12,11 +12,7 @@ export function SpotlightText({ text, className = "" }: SpotlightTextProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [opacity, setOpacity] = useState(0);
-    const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!containerRef.current) return;
@@ -49,10 +45,10 @@ export function SpotlightText({ text, className = "" }: SpotlightTextProps) {
             {/* Spotlight Overlay (Bright/Sharper) */}
             <motion.span
                 className="absolute inset-0 text-black dark:text-white pointer-events-none block"
-                style={isMounted ? {
+                style={{
                     maskImage: `radial-gradient(120px circle at ${position.x}px ${position.y}px, black, transparent)`,
                     WebkitMaskImage: `radial-gradient(120px circle at ${position.x}px ${position.y}px, black, transparent)`,
-                } : undefined}
+                }}
                 animate={{
                     opacity: opacity,
                 }}
