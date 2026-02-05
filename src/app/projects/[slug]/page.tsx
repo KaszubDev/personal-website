@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -7,21 +6,25 @@ import Image from "next/image";
 import { ProjectGallery } from "@/components/content/ProjectGallery";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
+import ReactMarkdown from "react-markdown";
+
+import { getProject, getAllProjects } from "@/lib/projects";
 
 // This is required for static export
 export async function generateStaticParams() {
+    const projects = getAllProjects();
     return projects.map((project) => ({
-        id: project.id,
+        slug: project.slug,
     }));
 }
 
 type Props = {
-    params: Promise<{ id: string }>
+    params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { id } = await params
-    const project = projects.find((p) => p.id === id);
+    const { slug } = await params
+    const project = getProject(slug);
     if (!project) return { title: "Project Not Found" };
 
     return {
@@ -31,8 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProjectPage({ params }: Props) {
-    const { id } = await params
-    const project = projects.find((p) => p.id === id);
+    const { slug } = await params
+    const project = getProject(slug);
+    const content = project?.content;
 
     if (!project) {
         notFound();
@@ -74,16 +78,12 @@ export default async function ProjectPage({ params }: Props) {
                             )}
                         </div>
 
-                        <div className="prose prose-lg dark:prose-invert">
-                            <h3>The Challenge</h3>
-                            <p>
-                                Detailed description of the problem, the context and what needed to be achieved.
-                                This section expands on the complexity of the task.
-                            </p>
-                            <h3>The Solution</h3>
-                            <p>
-                                How we approached the problem, design decisions made and the technical implementation details.
-                            </p>
+                        <div className="prose prose-lg dark:prose-invert prose-headings:font-bold prose-h3:text-2xl prose-p:text-gray-600 dark:prose-p:text-gray-300">
+                            {content ? (
+                                <ReactMarkdown>{content}</ReactMarkdown>
+                            ) : (
+                                <p>No detailed description available for this project.</p>
+                            )}
                         </div>
 
                     </div>

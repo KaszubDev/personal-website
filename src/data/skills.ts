@@ -40,7 +40,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "React", icon: Atom, category: "Frontend" },
             { name: "Next.js", icon: Zap, category: "Framework" },
             { name: "TypeScript", icon: FileCode2, category: "Language" },
-            { name: "JavaScript (ES6+)", icon: FileJson, category: "Language" },
+            { name: "JavaScript", icon: FileJson, category: "Language" },
             { name: "Tailwind CSS", icon: Palette, category: "Styling" },
             { name: "Sass", icon: Code2, category: "Styling" },
         ]

@@ -2,14 +2,18 @@
 
 import { Container } from "../ui/Container";
 import { Card } from "../ui/Card";
-import { projects } from "@/data/projects";
+import { Project } from "@/lib/projects";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export function ProjectsPreview() {
+interface ProjectsPreviewProps {
+    projects: Project[];
+}
+
+export function ProjectsPreview({ projects }: ProjectsPreviewProps) {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
@@ -104,8 +108,8 @@ export function ProjectsPreview() {
                     <div className="flex gap-6 md:gap-8 pr-[calc(50vw-50%)]">
                         {projects.map((project) => (
                             <Link
-                                href={`/projects/${project.id}`}
-                                key={project.id}
+                                href={`/projects/${project.slug}`}
+                                key={project.slug}
                                 className="min-w-[85vw] md:min-w-[480px] lg:min-w-[560px] snap-start"
                             >
                                 <Card hoverEffect={true} className="h-full">
