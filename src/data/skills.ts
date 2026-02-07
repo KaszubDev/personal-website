@@ -19,7 +19,8 @@ import {
     Sparkles,
     Atom,
     FileCode2,
-    LucideIcon
+    LucideIcon,
+    DatabaseZap
 } from "lucide-react";
 
 export type Skill = {
@@ -35,7 +36,7 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
     {
-        title: "Frontend & Languages",
+        title: "Frontend",
         items: [
             { name: "React", icon: Atom, category: "Frontend" },
             { name: "Next.js", icon: Zap, category: "Framework" },
@@ -46,7 +47,7 @@ export const skillGroups: SkillGroup[] = [
         ]
     },
     {
-        title: "Backend & CMS",
+        title: "Backend",
         items: [
             { name: "Node.js", icon: Cpu, category: "Backend" },
             { name: "PHP", icon: Server, category: "Backend" },
@@ -56,6 +57,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "REST API", icon: Network, category: "API" },
             { name: "GraphQL", icon: Share2, category: "API" },
             { name: "SQL", icon: Database, category: "Database" },
+            { name: "MongoDB", icon: DatabaseZap, category: "Database" },
         ]
     },
     {

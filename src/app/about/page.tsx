@@ -19,7 +19,7 @@ export default function AboutPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-4xl mx-auto text-center mb-16 md:mb-24"
+                    className="max-w-4xl mx-auto text-center mb-16 md:mb-20"
                 >
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-black dark:text-white leading-tight">
                         Driven by the Challenge <br />
