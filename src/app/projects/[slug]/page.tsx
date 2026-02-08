@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: Props) {
                 {/* Gallery Section - Full Width */}
                 {project.gallery && project.gallery.length > 0 && (
                     <div className="mt-20 pt-10 border-t border-gray-100 dark:border-white/5">
-                        <h3 className="text-2xl font-bold mb-8">Project Gallery</h3>
+                        <h3 className="text-2xl font-bold mb-8">Gallery</h3>
                         <ProjectGallery
                             images={project.gallery}
                             title={project.title}
