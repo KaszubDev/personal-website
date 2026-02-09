@@ -21,7 +21,7 @@ export function ComingSoon() {
                     More projects in the pipeline
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
-                    I'm constantly building and experimenting.
+                    I&apos;m constantly building and experimenting.
                     New case studies and experiments will be added here soon.
                 </p>
             </div>

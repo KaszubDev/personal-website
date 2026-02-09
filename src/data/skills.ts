@@ -20,7 +20,8 @@ import {
     Atom,
     FileCode2,
     LucideIcon,
-    DatabaseZap
+    DatabaseZap,
+    Cuboid
 } from "lucide-react";
 
 export type Skill = {
@@ -44,6 +45,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "JavaScript", icon: FileJson, category: "Language" },
             { name: "Tailwind CSS", icon: Palette, category: "Styling" },
             { name: "Sass", icon: Code2, category: "Styling" },
+            { name: "Three.js", icon: Cuboid, category: "3D Graphics" },
         ]
     },
     {
