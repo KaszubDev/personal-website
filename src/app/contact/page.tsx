@@ -103,7 +103,7 @@ export default function ContactPage() {
                                     ></textarea>
                                     <ValidationError prefix="Message" field="message" errors={state.errors} />
                                 </div>
-                                <Button type="submit" disabled={state.submitting} className="w-full text-lg py-4">
+                                <Button type="submit" disabled={state.submitting} className="w-full xs:text-lg xs:py-4">
                                     {state.submitting ? 'Sending...' : 'Send Message'}
                                 </Button>
                             </form>
