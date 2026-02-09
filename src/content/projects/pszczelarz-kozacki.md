@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 2
 title: "Pszczelarz Kozacki"
 role: "Full Stack Web Developer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "React", "SCSS", "Bootstrap"]

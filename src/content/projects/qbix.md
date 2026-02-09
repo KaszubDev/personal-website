@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 title: "Qbix"
 role: "Full Stack Web Developer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]

@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 5
 title: "Wyjazdy Szkolne"
 role: "Full Stack Web Developer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
