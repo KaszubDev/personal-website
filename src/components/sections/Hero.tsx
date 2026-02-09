@@ -18,9 +18,9 @@ export function Hero() {
         <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-                <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-slow" />
-                <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse-slow delay-1000" />
-                <div className="absolute inset-0 bg-white/50 dark:bg-black/80 backdrop-blur-[2px]" />
+                <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[60px] md:blur-[120px]" />
+                <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[50px] md:blur-[100px]" />
+                <div className="absolute inset-0 bg-white/50 dark:bg-black/80" />
             </div>
 
             {/* 3D Scene */}
