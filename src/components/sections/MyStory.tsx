@@ -33,7 +33,7 @@ export function MyStory() {
                             My journey began over 6 years ago. Over the years, I gathered a lot of experience and knowledge. My approach concentrates on performance, accessibility and clean code.
                         </p>
                         <p className="mb-6">
-                            I hold a Master's degree in Applied Computer Science, which gave me a strong theoretical foundation that I apply to solve real-world problems. I am a passionate learner and always eager to explore new technologies and trends. I am also a team player and enjoy working with others to create innovative solutions.
+                            I hold a Master&apos;s degree in Applied Computer Science, which gave me a strong theoretical foundation that I apply to solve real-world problems. I am a passionate learner and always eager to explore new technologies and trends. I am also a team player and enjoy working with others to create innovative solutions.
                         </p>
                         <p>
                             Outside of work, I enjoy staying active through sports, traveling to new destinations and spending quality time with my loved ones.
