@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { getAllProjects } from "@/lib/projects";
 import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
+import { ComingSoon } from "@/components/sections/ComingSoon";
 
 export default function ProjectsPage() {
     const projects = getAllProjects();
@@ -16,6 +17,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <ProjectsGrid projects={projects} />
+                <ComingSoon />
             </Container>
         </main>
     );
