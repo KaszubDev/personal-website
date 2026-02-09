@@ -65,7 +65,7 @@ export function ProjectsPreview({ projects }: ProjectsPreviewProps) {
         <section id="projects" className="py-24 overflow-hidden">
             <Container>
                 <div className="flex justify-between items-end mb-8 md:mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Selected Work</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Work</h2>
 
                     <div className="hidden md:flex items-center gap-8">
                         <Link

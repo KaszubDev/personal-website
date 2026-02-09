@@ -1,5 +1,6 @@
 ---
 order: 1
+featured: true
 title: "New Year Experience"
 role: "Frontend Developer"
 tech: ["React", "Three.js", "TypeScript", "CSS"]

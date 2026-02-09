@@ -13,6 +13,7 @@ export interface Project {
     github?: string;
     image?: string;
     gallery?: string[];
+    featured?: boolean;
     content: string; // The markdown body
 }
 

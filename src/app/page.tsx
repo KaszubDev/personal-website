@@ -7,12 +7,13 @@ import { ShortContact } from "@/components/sections/ShortContact";
 
 export default function Home() {
   const projects = getAllProjects();
+  const featuredProjects = projects.filter(project => project.featured);
 
   return (
     <main>
       <Hero />
       <ShortAbout />
-      <ProjectsPreview projects={projects} />
+      <ProjectsPreview projects={featuredProjects} />
       <Skills />
       <ShortContact />
     </main>

@@ -1,5 +1,6 @@
 ---
 order: 3
+featured: true
 title: "Fiteat"
 role: "Full Stack Web Developer"
 tech: ["WordPress", "WooCommerce", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
