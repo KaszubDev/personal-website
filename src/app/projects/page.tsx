@@ -2,6 +2,12 @@ import { Container } from "@/components/ui/Container";
 import { getAllProjects } from "@/lib/projects";
 import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 import { ComingSoon } from "@/components/sections/ComingSoon";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "A collection of my work. Both professional and personal.",
+};
 
 export default function ProjectsPage() {
     const projects = getAllProjects();
