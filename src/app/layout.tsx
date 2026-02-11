@@ -15,16 +15,80 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Krzysztof Kaszubowski | Web Developer",
+  title: {
+    default: "Krzysztof Kaszubowski | Web Developer",
+    template: "%s | Krzysztof Kaszubowski",
+  },
   description:
-    "Portfolio website of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance web applications.",
+    "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications with Next.js, React, and TypeScript.",
+  metadataBase: new URL("https://www.kaszub.dev"),
+  keywords: [
+    "Web Developer",
+    "Frontend Developer",
+    "Full Stack Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Portfolio",
+    "Krzysztof Kaszubowski",
+  ],
+  authors: [{ name: "Krzysztof Kaszubowski" }],
+  creator: "Krzysztof Kaszubowski",
+  publisher: "Krzysztof Kaszubowski",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "Krzysztof Kaszubowski | Web Developer",
     description:
-      "Portfolio website of Krzysztof Kaszubowski, a Web Developer",
-    type: "website",
+      "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications.",
+    url: "https://www.kaszub.dev",
+    siteName: "Krzysztof Kaszubowski Portfolio",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Krzysztof Kaszubowski - Web Developer",
+      },
+    ],
     locale: "en_US",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Krzysztof Kaszubowski | Web Developer",
+    description:
+      "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance web applications.",
+    images: ["/opengraph-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Krzysztof Kaszubowski",
+  url: "https://www.kaszub.dev",
+  jobTitle: "Web Developer",
+  sameAs: [
+    "https://www.linkedin.com/in/krzysztof-kaszubowski/",
+    "https://github.com/KaszubDev"
+  ],
+  description:
+    "Web Developer specializing in building high-performance web applications with Next.js and React.",
 };
 
 import { Header } from "@/components/layout/Header";
@@ -46,6 +110,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
           <Header />
           {children}
           <SpeedInsights />
