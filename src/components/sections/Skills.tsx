@@ -1,13 +1,37 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
-
 import { skillGroups } from "@/data/skills";
 
 export function Skills() {
+    const [activeItem, setActiveItem] = useState<string | null>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: TouchEvent) => {
+            const target = event.target as HTMLElement;
+            if (activeItem && !target.closest('.skill-item')) {
+                setActiveItem(null);
+            }
+        };
+        document.addEventListener("touchstart", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("touchstart", handleClickOutside);
+        };
+    }, [activeItem]);
+
+    const handleSkillClick = (itemName: string) => {
+        if (window.matchMedia('(hover: none)').matches) {
+            setActiveItem(activeItem === itemName ? null : itemName);
+        }
+    };
+
     return (
-        <section className="py-20 bg-white/50 dark:bg-zinc-900/20 backdrop-blur-sm">
+        <section
+            className="py-20 bg-white/50 dark:bg-zinc-900/20 backdrop-blur-sm"
+        >
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-20">
                     <motion.h2
@@ -50,15 +74,32 @@ export function Skills() {
                                     <motion.div
                                         key={item.name}
                                         whileHover={{ y: -5 }}
-                                        className="group relative flex flex-col items-center justify-center p-6 bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800/50 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-500/20 transition-all duration-300"
+                                        animate={activeItem === item.name ? { y: -5 } : { y: 0 }}
+                                        onClick={() => handleSkillClick(item.name)}
+                                        className={`skill-item group relative flex flex-col items-center justify-center p-6 bg-white dark:bg-zinc-900 border rounded-2xl shadow-sm transition-all duration-300 ${activeItem === item.name
+                                            ? 'shadow-md border-blue-500/20'
+                                            : 'border-gray-100 dark:border-zinc-800/50 hover:shadow-md hover:border-blue-500/20'
+                                            }`}
                                     >
-                                        <div className="p-3 bg-gray-50 dark:bg-zinc-800/50 rounded-xl mb-4 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors">
-                                            <item.icon size={28} className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors stroke-[1.5]" />
+                                        <div className={`p-3 rounded-xl mb-4 transition-colors ${activeItem === item.name
+                                            ? 'bg-blue-50 dark:bg-blue-900/20'
+                                            : 'bg-gray-50 dark:bg-zinc-800/50 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20'
+                                            }`}>
+                                            <item.icon size={28} className={`transition-colors stroke-[1.5] ${activeItem === item.name
+                                                ? 'text-blue-600 dark:text-blue-400'
+                                                : 'text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400'
+                                                }`} />
                                         </div>
-                                        <span className="font-medium text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors">
+                                        <span className={`font-medium text-sm transition-colors ${activeItem === item.name
+                                            ? 'text-gray-900 dark:text-gray-100'
+                                            : 'text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100'
+                                            }`}>
                                             {item.name}
                                         </span>
-                                        <span className="text-[10px] text-gray-400 mt-1 opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2">
+                                        <span className={`text-[10px] text-gray-400 mt-1 transition-opacity absolute bottom-2 ${activeItem === item.name
+                                            ? 'opacity-100'
+                                            : 'opacity-0 group-hover:opacity-100'
+                                            }`}>
                                             {item.category}
                                         </span>
                                     </motion.div>
