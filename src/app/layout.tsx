@@ -94,6 +94,7 @@ const jsonLd = {
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 export default function RootLayout({
   children,
@@ -119,6 +120,7 @@ export default function RootLayout({
           {children}
           <SpeedInsights />
           <Analytics />
+          <ScrollToTop />
           <Footer />
         </ThemeProvider>
       </body>
