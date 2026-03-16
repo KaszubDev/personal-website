@@ -30,10 +30,10 @@ export function Skills() {
 
     return (
         <section
-            className="py-20 bg-white/50 dark:bg-zinc-900/20 backdrop-blur-sm"
+            className="md:py-20 bg-white/50 dark:bg-zinc-900/20 backdrop-blur-sm"
         >
             <Container>
-                <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-20">
+                <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-12 md:mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
