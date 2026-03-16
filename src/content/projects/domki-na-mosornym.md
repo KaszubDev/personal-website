@@ -32,13 +32,13 @@ The main objective was to deliver a fully functional website based on profession
 I developed a completely unique WordPress theme from scratch based on PSD designs, ensuring that the final product is lightweight, fast and perfectly aligned with the brand's visual identity.
 
 #### 2. Custom Booking Plugin
-The standout feature of this project is a custom-built WordPress plugin for managing cottage reservations. Created from scratch, it allows users to check availability, select dates, and finalize reservations, while giving the administration full control over bookings in the WordPress dashboard.
+The standout feature of this project is a custom-built WordPress plugin for managing cottage reservations. Created from scratch, it allows users to check availability, select dates and finalize reservations, while giving the administration full control over bookings in the WordPress dashboard.
 
 #### 3. Pixel-perfect PSD to HTML
 The project required a precise translation of .psd designs into a fully responsive and functional website, ensuring consistent user experience across desktop and mobile devices.
 
 #### 4. Full editorial control (ACF Pro)
-I implemented a flexible content management system using ACF Pro. This allows even non-technical staff to easily update text, images, and layout elements through the WordPress admin panel without any risk of breaking the site's structure.
+I implemented a flexible content management system using ACF Pro. This allows even non-technical staff to easily update text, images and layout elements through the WordPress admin panel without any risk of breaking the site's structure.
 
 ### 💡 Challenges & Solutions
 

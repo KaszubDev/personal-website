@@ -32,10 +32,10 @@ The main objective was to deliver a "Pixel Perfect" implementation based on prof
 I developed a completely unique WordPress theme from scratch, ensuring that the final product is not only lightweight and fast but also perfectly aligned with the brand's visual identity. No page builders were used, resulting in clean and maintainable code.
 
 #### 2. Full editorial control (ACF Pro)
-I implemented a flexible content management system using ACF Pro. This allows even non-technical staff to easily update text, images, and layout elements through the WordPress admin panel without any risk of breaking the site's structure.
+I implemented a flexible content management system using ACF Pro. This allows even non-technical staff to easily update text, images and layout elements through the WordPress admin panel without any risk of breaking the site's structure.
 
 #### 3. Responsive & pixel-perfect implementation
-The project required a precise translation of .psd designs into a functional website. I focused on high-quality CSS architecture to ensure that every element, margin, and typography choice remains consistent across all screen sizes and devices.
+The project required a precise translation of .psd designs into a functional website. I focused on high-quality CSS architecture to ensure that every element, margin and typography choice remains consistent across all screen sizes and devices.
 
 ### 💡 Challenges & Solutions
 

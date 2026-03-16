@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Krzysztof Kaszubowski",
   },
   description:
-    "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications with Next.js, React, and TypeScript.",
+    "Personal website of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications with Next.js, React and TypeScript.",
   metadataBase: new URL("https://www.kaszub.dev"),
   keywords: [
     "Web Developer",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Krzysztof Kaszubowski | Web Developer",
     description:
-      "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications.",
+      "Personal website of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance, modern web applications.",
     url: "https://www.kaszub.dev",
     siteName: "Krzysztof Kaszubowski Portfolio",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Krzysztof Kaszubowski | Web Developer",
     description:
-      "Portfolio of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance web applications.",
+      "Personal website of Krzysztof Kaszubowski, a Web Developer specializing in building high-performance web applications.",
     images: ["/opengraph-image.png"],
   },
   robots: {

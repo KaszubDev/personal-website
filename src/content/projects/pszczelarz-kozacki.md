@@ -22,7 +22,7 @@ This project is a custom-built brand website for a honey producer. It serves as 
 The client required a pixel-perfect implementation of a custom design (from PSD) that would distinguish their brand from competitors. Key requirements included:
 1.  **Sales automation:** A tool for configuring and ordering personalized wedding gifts
 2.  **Product discovery:** An interactive advisor to help customers choose the right honey
-3.  **Zero-code management:** A backend so intuitive that non-technical staff could update every text, image, and translation without breaking the layout
+3.  **Zero-code management:** A backend so intuitive that non-technical staff could update every text, image and translation without breaking the layout
 
 ### 🛠️ Tech Stack
 * **Frontend:** HTML5, SCSS, JavaScript & jQuery, React.js (interactive modules), Bootstrap CSS

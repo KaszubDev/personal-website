@@ -20,7 +20,7 @@ const experiences = [
         year: "2020 - 2021",
         title: "Junior Web Developer",
         company: "Everywhere Studio",
-        description: "Built websites and e-commerce stores using WordPress and WooCommerce. Developed custom themes from Photoshop designs using PHP, jQuery, and SCSS. Managed client communications to define technical requirements and implement real-time updates.",
+        description: "Built websites and e-commerce stores using WordPress and WooCommerce. Developed custom themes from Photoshop designs using PHP, jQuery and SCSS. Managed client communications to define technical requirements and implement real-time updates.",
     }
 ];
 
