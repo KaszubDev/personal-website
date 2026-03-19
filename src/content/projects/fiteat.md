@@ -2,7 +2,7 @@
 order: 3
 featured: true
 title: "Fiteat"
-role: "Full Stack Web Developer"
+role: "Full Stack Engineer"
 tech: ["WordPress", "WooCommerce", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
 link: "https://fiteat.co"
 image: "/images/projects/fiteat_1.jpg"
@@ -16,7 +16,7 @@ description: "A comprehensive diet catering platform built on a custom WordPress
 
 ## Custom dietary catering platform
 
-A web platform for a premium diet catering service. This was a major project where I served as the **Full Stack Developer**, responsible for transforming the graphic concepts into a fully functional web application with a complex ordering logic.
+A web platform for a premium diet catering service. This was a major project where I served as the **Full-Stack Engineer**, responsible for transforming the graphic concepts into a fully functional web application with a complex ordering logic.
 
 ### 🎯 Project Goals
 The client needed more than just a brochure site; they required a robust sales tool that reflected the energy and vitality of their brand. The goal was to build a custom system allowing users to order personalized diet plans while maintaining a colorful aesthetic that drives user engagement.

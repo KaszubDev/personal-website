@@ -1,8 +1,7 @@
 ---
 order: 4
 featured: true
-title: "Qbix"
-role: "Full Stack Web Developer"
+role: "Full Stack Engineer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
 link: "https://qbix.com.pl"
 image: "/images/projects/qbix_1.png"

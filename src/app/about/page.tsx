@@ -3,7 +3,7 @@ import { AboutClient } from "./AboutClient";
 
 export const metadata: Metadata = {
     title: "About Me",
-    description: "Learn more about my background, experience and values as a Web Developer.",
+    description: "Learn more about my background, experience and values as a Full-Stack Engineer.",
 };
 
 export default function AboutPage() {

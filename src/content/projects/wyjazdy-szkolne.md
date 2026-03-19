@@ -2,7 +2,7 @@
 order: 5
 featured: true
 title: "Wyjazdy Szkolne"
-role: "Full Stack Web Developer"
+role: "Full Stack Engineer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
 link: "https://wyjazdyszkolne.pl"
 image: "/images/projects/wyjazdy_szkolne_1.png"

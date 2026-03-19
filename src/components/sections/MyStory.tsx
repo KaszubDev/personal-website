@@ -14,7 +14,7 @@ export function MyStory() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500 sticky top-24"
+                            className="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500 sticky top-24"
                         >
                             My Story
                         </motion.h2>
@@ -27,7 +27,7 @@ export function MyStory() {
                         className="md:w-2/3 prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-400"
                     >
                         <p className="mb-6">
-                            I am a Web Developer driven by the challenge of creating simple, elegant solutions to complex problems.
+                            I am a Full-Stack Engineer driven by the challenge of creating simple, elegant solutions to complex problems.
                         </p>
                         <p className="mb-6">
                             My journey began over 6 years ago. Over the years, I gathered a lot of experience and knowledge. My approach concentrates on performance, accessibility and clean code.

@@ -2,7 +2,7 @@
 order: 6
 featured: true
 title: "Domki na Mosornym"
-role: "Full Stack Web Developer"
+role: "Full Stack Engineer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "SCSS", "Bootstrap"]
 link: "https://domkinamosornym.pl/"
 image: "/images/projects/domki_na_mosornym_1.png"

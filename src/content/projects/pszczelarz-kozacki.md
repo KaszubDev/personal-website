@@ -2,7 +2,7 @@
 order: 2
 featured: true
 title: "Pszczelarz Kozacki"
-role: "Full Stack Web Developer"
+role: "Full Stack Engineer"
 tech: ["WordPress", "PHP", "JavaScript", "jQuery", "React", "SCSS", "Bootstrap"]
 link: "https://pszczelarz-kozacki.pl"
 image: "/images/projects/pszczelarz_1.png"
