@@ -117,10 +117,12 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <Header />
-          {children}
+          <div className="flex-1 flex flex-col relative w-full">
+            {children}
+            <ScrollToTop />
+          </div>
           <SpeedInsights />
           <Analytics />
-          <ScrollToTop />
           <Footer />
         </ThemeProvider>
       </body>
