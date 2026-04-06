@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { GithubIcon } from "@/components/ui/GithubIcon";
 import Link from "next/link";
 import Image from "next/image";
 import { ProjectGallery } from "@/components/content/ProjectGallery";
@@ -130,7 +131,7 @@ export default async function ProjectPage({ params }: Props) {
                                     {project.github && (
                                         <Link href={project.github} target="_blank" rel="noopener noreferrer" className="w-full">
                                             <Button variant="outline" className="w-full gap-2">
-                                                View Code <Github size={16} />
+                                                View Code <GithubIcon size={16} />
                                             </Button>
                                         </Link>
                                     )}
