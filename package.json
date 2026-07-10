@@ -37,11 +37,12 @@
     "@types/react-dom": "^19",
     "eslint": "^10",
     "eslint-config-next": "^16.2.2",
-    "postcss": "^8.5.8",
+    "postcss": "8.5.14",
     "tailwindcss": "^4",
     "typescript": "^6"
   },
   "overrides": {
-    "minimatch": "^10.2.1"
+    "minimatch": "^10.2.1",
+    "postcss": "8.5.14"
   }
 }
