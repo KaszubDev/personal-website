@@ -27,7 +27,7 @@ export function MyStory() {
                         className="md:w-2/3 prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-400"
                     >
                         <p className="mb-6">
-                            I am a Full-Stack Engineer driven by the challenge of creating simple, elegant solutions to complex problems.
+                            I am a Software Engineer driven by the challenge of creating simple, elegant solutions to complex problems.
                         </p>
                         <p className="mb-6">
                             My journey began over 6 years ago. Over the years, I gathered a lot of experience and knowledge. My approach concentrates on performance, accessibility and clean code.

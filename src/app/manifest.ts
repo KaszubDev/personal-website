@@ -4,10 +4,10 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: "Krzysztof Kaszubowski | Full-Stack Engineer",
+        name: "Krzysztof Kaszubowski | Software Engineer",
         short_name: "Krzysztof Kaszubowski",
         description:
-            "Portfolio website of Krzysztof Kaszubowski, a Full-Stack Engineer specializing in building high-performance web applications.",
+            "Portfolio website of Krzysztof Kaszubowski, a Software Engineer specializing in building high-performance web applications.",
         start_url: "/",
         display: "standalone",
         background_color: "#030014", // Matches the hero background base

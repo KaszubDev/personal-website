@@ -17,16 +17,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Krzysztof Kaszubowski | Full-Stack Engineer",
+    default: "Krzysztof Kaszubowski | Software Engineer",
     template: "%s | Krzysztof Kaszubowski",
   },
   description:
-    "Personal website of Krzysztof Kaszubowski, a Full-Stack Engineer specializing in building high-performance, modern web applications.",
+    "Personal website of Krzysztof Kaszubowski, a Software Engineer specializing in building high-performance, modern web applications.",
   metadataBase: new URL("https://www.kaszub.dev"),
   keywords: [
-    "Full-Stack Engineer",
-    "Frontend Engineer",
     "Software Engineer",
+    "Frontend Engineer",
+    "Full-Stack Engineer",
     "React",
     "Next.js",
     "TypeScript",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Krzysztof Kaszubowski | Full-Stack Engineer",
+    title: "Krzysztof Kaszubowski | Software Engineer",
     description:
-      "Personal website of Krzysztof Kaszubowski, a Full-Stack Engineer specializing in building high-performance, modern web applications.",
+      "Personal website of Krzysztof Kaszubowski, a Software Engineer specializing in building high-performance, modern web applications.",
     url: "https://www.kaszub.dev",
     siteName: "Krzysztof Kaszubowski Portfolio",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Krzysztof Kaszubowski - Full-Stack Engineer",
+        alt: "Krzysztof Kaszubowski - Software Engineer",
       },
     ],
     locale: "en_US",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krzysztof Kaszubowski | Full-Stack Engineer",
+    title: "Krzysztof Kaszubowski | Software Engineer",
     description:
-      "Personal website of Krzysztof Kaszubowski, a Full-Stack Engineer specializing in building high-performance web applications.",
+      "Personal website of Krzysztof Kaszubowski, a Software Engineer specializing in building high-performance web applications.",
     images: ["/opengraph-image.png"],
   },
   robots: {
@@ -83,13 +83,13 @@ const jsonLd = {
   "@type": "Person",
   name: "Krzysztof Kaszubowski",
   url: "https://www.kaszub.dev",
-  jobTitle: "Full-Stack Engineer",
+  jobTitle: "Software Engineer",
   sameAs: [
     "https://www.linkedin.com/in/krzysztof-kaszubowski/",
     "https://github.com/KaszubDev"
   ],
   description:
-    "Full-Stack Engineer specializing in building high-performance web applications.",
+    "Software Engineer specializing in building high-performance web applications.",
 };
 
 import { Header } from "@/components/layout/Header";
