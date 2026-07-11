@@ -6,6 +6,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --z-floating: 30;
+  --z-header: 40;
+  --z-overlay: 50;
+  --z-modal: 60;
 }
 
 @theme inline {
@@ -24,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: auto;
 }
 
 body {
@@ -35,6 +40,22 @@ body {
 }
 
 @layer utilities {
+  .z-layer-floating {
+    z-index: var(--z-floating);
+  }
+
+  .z-layer-header {
+    z-index: var(--z-header);
+  }
+
+  .z-layer-overlay {
+    z-index: var(--z-overlay);
+  }
+
+  .z-layer-modal {
+    z-index: var(--z-modal);
+  }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

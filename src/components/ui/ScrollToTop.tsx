@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useModalState } from "@/providers/ModalProvider";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const { isAnyModalOpen } = useModalState();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +34,7 @@ export function ScrollToTop() {
   };
 
   return (
-    <div className="sticky bottom-0 w-full h-0 pointer-events-none mx-auto max-w-7xl z-50">
+    <div className="sticky bottom-0 w-full h-0 pointer-events-none mx-auto max-w-7xl z-layer-floating">
       <button
         type="button"
         onClick={scrollToTop}
@@ -42,10 +44,12 @@ export function ScrollToTop() {
           "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-white/90 dark:hover:bg-black/90",
           "shadow-[0_4px_16px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_16px_rgba(0,0,0,0.2)]",
           "transition-all duration-300 ease-out focus:outline-none",
-          isVisible
+          isVisible && !isAnyModalOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"
         )}
+        aria-hidden={!isVisible || isAnyModalOpen}
+        tabIndex={isVisible && !isAnyModalOpen ? 0 : -1}
         aria-label="Scroll to top of page"
       >
         <ArrowUp className="w-5 h-5" />

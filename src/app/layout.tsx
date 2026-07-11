@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ModalProvider } from "@/providers/ModalProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -112,18 +113,20 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <Header />
-          <div className="flex-1 flex flex-col relative w-full">
-            {children}
-            <ScrollToTop />
-          </div>
-          <SpeedInsights />
-          <Analytics />
-          <Footer />
+          <ModalProvider>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <Header />
+            <div className="flex-1 flex flex-col relative w-full">
+              {children}
+              <ScrollToTop />
+            </div>
+            <SpeedInsights />
+            <Analytics />
+            <Footer />
+          </ModalProvider>
         </ThemeProvider>
       </body>
     </html>
