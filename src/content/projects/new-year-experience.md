@@ -1,8 +1,8 @@
 ---
-order: 1
+order: 2
 featured: true
 title: "New Year Experience"
-role: "Frontend Developer"
+role: "Full Stack Engineer"
 tech: ["React", "Three.js", "TypeScript", "CSS"]
 link: "https://kaszubdev.github.io/new-year"
 github: "https://github.com/KaszubDev/new-year"

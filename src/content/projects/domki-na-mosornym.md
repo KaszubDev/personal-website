@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 7
 featured: true
 title: "Domki na Mosornym"
 role: "Full Stack Engineer"

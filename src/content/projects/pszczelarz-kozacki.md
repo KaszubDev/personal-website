@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 3
 featured: true
 title: "Pszczelarz Kozacki"
 role: "Full Stack Engineer"

@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 featured: true
 title: "Wyjazdy Szkolne"
 role: "Full Stack Engineer"
