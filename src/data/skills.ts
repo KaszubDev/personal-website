@@ -5,11 +5,9 @@ import {
     Server,
     Database,
     PenTool,
-    Smartphone,
     GitBranch,
     TerminalSquare,
     Cpu,
-    Bot,
     FileJson,
     LayoutTemplate,
     Rocket,
@@ -68,9 +66,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "Git", icon: GitBranch, category: "Version Control" },
             { name: "VS Code", icon: TerminalSquare, category: "Editor" },
             { name: "Figma", icon: PenTool, category: "Design" },
-            { name: "Responsive", icon: Smartphone, category: "Methodology" },
-            { name: "Copilot", icon: Bot, category: "AI Assistant" },
-            { name: "Antigravity", icon: Sparkles, category: "AI Assistant" },
+            { name: "AI Tools", icon: Sparkles, category: "Workflow" },
         ]
     }
 ];
