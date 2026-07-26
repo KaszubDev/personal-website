@@ -35,14 +35,15 @@
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^10",
+    "eslint": "^9",
     "eslint-config-next": "^16.2.2",
-    "postcss": "8.5.14",
+    "postcss": "8.5.23",
     "tailwindcss": "^4",
     "typescript": "^6"
   },
   "overrides": {
     "minimatch": "^10.2.1",
-    "postcss": "8.5.14"
+    "postcss": "8.5.23",
+    "sharp": "^0.35.3"
   }
 }
